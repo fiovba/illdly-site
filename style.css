@@ -91,9 +91,8 @@ nav{
 }
 
 #yellow-btn{
-    background-color: #f1d204;
+    background-color: yellow;
     color:white;
-    border:2px solid  #f1d204;
 }
 
 .container-f{
@@ -246,18 +245,21 @@ nav{
 body{
     overflow-x: hidden;
 }
-.galery{
-    display: flex;
-    flex-wrap: wrap;
-    .foto{
-        width: 50%;
-        height: 500px;
-    }
+.galery {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
 }
-.foto1{ background: url('./img/front-page-project-1.jpg') center/cover}
-.foto2{ background: url('./img/front-page-project-2.jpg') center/cover;}
-.foto3{ background: url('./img/front-page-project-3.jpg') center/cover;}
-.foto4{background: url('./img/front-page-project-4.jpg') center/cover}
+
+.galery .foto {
+    aspect-ratio: 1 / 1;
+    background-size: cover;
+    background-position: center;
+}
+.foto1 { background-image: url('./img/front-page-project-1.jpg'); }
+.foto2 { background-image: url('./img/front-page-project-2.jpg'); }
+.foto3 { background-image: url('./img/front-page-project-3.jpg'); }
+.foto4 { background-image: url('./img/front-page-project-4.jpg'); }
 .section-header h3{
     font-weight: 300;
     font-size: 1em;
@@ -447,9 +449,9 @@ article{
     .mike{
         font-size:1.5em;
     }
+    .img-f {
+        width: 100%;
+    }
     .galery {
-        .foto{
-            width: 25%;
-        }
-    }
+        grid-template-columns: repeat(4, 1fr);}
 }
